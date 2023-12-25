@@ -1,0 +1,17 @@
+{%extends 'main.html' %}
+
+{% block content %}
+
+<div>
+    <img style="width: 300px; height: 200px;" src="{{id_card.id_card_img.id_img.url}}">
+    <p>Identification Number : {{id_card.identification_number}}</p>
+    <p>First Name : {{id_card.name}}</p>
+    <p>Last Name : {{id_card.last_name}}</p>
+    <p> Date of Birth : {{id_card.date_of_birth}}</p>
+    <p> Date of Issue : {{id_card.date_of_issue}}</p>
+    <p> Date of Expiry : {{id_card.date_of_expiry}}</p>
+    <button class="btn btn-primary" onclick="window.location.href ='/update_card/{{id_card.id}}'">Update</button>
+    <button class="btn btn-danger" onclick="window.location.href ='/delete_card/{{id_card.id}}'">Delete</button>
+</div>
+
+{% endblock content %}

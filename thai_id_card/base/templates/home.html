@@ -1,0 +1,11 @@
+{%extends 'main.html' %}
+
+{% block content %}
+<div class="home-container">
+    {%for id_card in all_id%}
+    <div class="container">
+        <a href="id_card/{{id_card.id}}">{{id_card.identification_number}}</a>
+    </div>
+    {%endfor%}
+</div>
+{% endblock content %}

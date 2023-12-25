@@ -1,0 +1,35 @@
+{%extends 'main.html' %}
+
+{% block content %}
+<div>
+    <img style="width: 300px; height: 200px;" src="{{image_instance.id_img.url}}">
+    <form method="post">
+        {%csrf_token%}
+        <div class="form-group">
+            <label for="identification_number">Identification Number</label>
+            {{id_form.identification_number}}
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            {{id_form.name}}
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            {{id_form.last_name}}
+        </div>
+        <div class="form-group">
+            <label for="date_of_birth">Date of Birth</label>
+            {{id_form.date_of_birth}}
+        </div>
+        <div class="form-group">
+            <label for="date_of_issue">Date of Issue</label>
+            {{id_form.date_of_issue}}
+        </div>
+        <div class="form-group">
+            <label for="date_of_expiry">Date of Expiry</label>
+            {{id_form.date_of_expiry}}
+        </div>
+        <button type="submit">Save Form</button>
+    </form>
+</div>
+{% endblock content %}
